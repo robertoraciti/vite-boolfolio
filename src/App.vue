@@ -1,21 +1,17 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+import ProjectList from "./components/ProjectList.vue";
 
 export default {
-  data() {
-    return {
-      title: "Hello world",
-    };
+  components: {
+    ProjectList,
   },
-
-  // components: {
-  //   MyComponent,
-  // },
 };
 </script>
 
 <template>
-  <h1 class="btn btn-primary">{{ title }}</h1>
+  <div class="container mt-5">
+    <ProjectList />
+  </div>
 </template>
 
 <style lang="scss" scoped></style>

@@ -1,0 +1,25 @@
+<script>
+export default {
+  //   data() {
+  //     return {
+  //       title: "Hello world",
+  //     };
+  //   },
+
+  props: { project: Object },
+};
+</script>
+
+<template>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4>Progetto n° {{ project.id }}</h4>
+        <p>Nome: {{ project.name }}</p>
+        <p>Link repo: {{ project.repo }}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped></style>
