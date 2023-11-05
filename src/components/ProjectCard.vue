@@ -15,6 +15,7 @@ export default {
     <div class="card h-100">
       <div class="card-body">
         <h4>Progetto n° {{ project.id }}</h4>
+        <hr />
         <p>Nome: {{ project.name }}</p>
         <p>Link repo: {{ project.repo }}</p>
       </div>
