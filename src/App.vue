@@ -1,19 +1,17 @@
 <script>
-import { RouterView } from "vue-router";
-import ProjectList from "./components/ProjectList.vue";
+import Navbar from "./components/Navbar.vue";
 
 export default {
   components: {
-    ProjectList,
-    RouterView,
+    Navbar,
   },
 };
 </script>
 
 <template>
+  <Navbar />
   <div class="container mt-5">
-    <ProjectList />
-    <RouterView></RouterView>
+    <router-view></router-view>
   </div>
 </template>
 

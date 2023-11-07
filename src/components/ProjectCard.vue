@@ -1,12 +1,6 @@
 <script>
 export default {
-  //   data() {
-  //     return {
-  //       title: "Hello world",
-  //     };
-  //   },
-
-  props: { project: Object },
+  props: { project: Object, isDetail: Boolean },
 };
 </script>
 
@@ -18,6 +12,21 @@ export default {
         <hr />
         <p>Nome: {{ project.name }}</p>
         <p>Link repo: {{ project.repo }}</p>
+        <p>Collaboratori: {{ project.collaborators }}</p>
+        <p>Data di Pubblicazione: {{ project.publishing_date }}</p>
+      </div>
+      <div class="card-footer" v-if="!isDetail">
+        <router-link
+          :to="{
+            name: 'project-detail',
+            params: {
+              id: project.id,
+            },
+          }"
+          class="btn btn-primary"
+        >
+          Vedi
+        </router-link>
       </div>
     </div>
   </div>
