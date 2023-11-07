@@ -16,6 +16,11 @@ const router = createRouter({
       path: "/portfolio",
       component: PortfolioPage,
     },
+    {
+      name: "project-detail",
+      path: "/project-detail",
+      component: ProjectDetail,
+    },
   ],
 });
 

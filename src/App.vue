@@ -1,9 +1,11 @@
 <script>
+import { RouterView } from "vue-router";
 import ProjectList from "./components/ProjectList.vue";
 
 export default {
   components: {
     ProjectList,
+    RouterView,
   },
 };
 </script>
@@ -11,6 +13,7 @@ export default {
 <template>
   <div class="container mt-5">
     <ProjectList />
+    <RouterView></RouterView>
   </div>
 </template>
 
