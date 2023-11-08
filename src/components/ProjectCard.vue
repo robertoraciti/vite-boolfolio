@@ -8,7 +8,24 @@ export default {
   <div class="col">
     <div class="card h-100">
       <div class="card-body">
-        <h4>Progetto n° {{ project.id }}</h4>
+        <div class="d-flex justify-content-between">
+          <h4>Progetto n° {{ project.id }}</h4>
+          <router-link
+            :to="{
+              name: 'projects-by-typology',
+              params: {
+                id: project.typology.id,
+              },
+            }"
+            ><span
+              class="badge"
+              :style="{ backgroundColor: project.typology.color }"
+            >
+              {{ project.typology.name }}
+            </span>
+          </router-link>
+        </div>
+
         <hr />
         <p>Nome: {{ project.name }}</p>
         <p>Link repo: {{ project.repo }}</p>
